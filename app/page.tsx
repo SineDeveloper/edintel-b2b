@@ -17,7 +17,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="text-4xl font-bold text-gray-800 dark:text-white mb-8 text-center"
         >
-          B2C Contact Form
+          B2B Contact Form
         </motion.h1>
         
         <motion.form 
@@ -29,29 +29,12 @@ export default function Home() {
           className="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700"
         >
           <input type="hidden" name="oid" value="00Dg70000087CJB" />
-          <input type="hidden" name="retURL" value="https://edintel-b2c.vercel.app/thank-you" />
+          <input type="hidden" name="retURL" value="https://edintel-b2b.vercel.app/thank-you" />
           
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.3 }}
-          >
-            <label htmlFor="salutation" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Salutation</label>
-            <select id="salutation" name="salutation" className="w-full rounded-lg border border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-3 transition-all duration-200">
-              <option value="">--None--</option>
-              <option value="Mr.">Mr.</option>
-              <option value="Ms.">Ms.</option>
-              <option value="Mrs.">Mrs.</option>
-              <option value="Dr.">Dr.</option>
-              <option value="Prof.">Prof.</option>
-              <option value="Mx.">Mx.</option>
-            </select>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3, delay: 0.4 }}
           >
             <label htmlFor="first_name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">First Name <span className="text-red-500">*</span></label>
             <input 
@@ -66,12 +49,27 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3, delay: 0.5 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
           >
             <label htmlFor="last_name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Last Name <span className="text-red-500">*</span></label>
             <input 
               id="last_name" 
               name="last_name" 
+              type="text" 
+              required
+              className="w-full rounded-lg border border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-3 transition-all duration-200"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
+          >
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone <span className="text-red-500">*</span></label>
+            <input 
+              id="phone" 
+              name="phone" 
               type="text" 
               required
               className="w-full rounded-lg border border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-3 transition-all duration-200"
@@ -113,20 +111,14 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.8 }}
           >
-            <label htmlFor="00Ng700000C5dQ1" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Preferred Branch <span className="text-red-500">*</span></label>
-            <select 
-              id="00Ng700000C5dQ1" 
-              name="00Ng700000C5dQ1" 
-              title="Preferred Branch"
+            <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Company <span className="text-red-500">*</span></label>
+            <input 
+              id="company" 
+              name="company" 
+              type="text" 
               required
               className="w-full rounded-lg border border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-3 transition-all duration-200"
-            >
-              <option value="">--Please select--</option>
-              <option value="Bangkapi">Bangkapi</option>
-              <option value="Silom">Silom</option>
-              <option value="Chaengwattana">Chaengwattana</option>
-              <option value="Chonburi">Chonburi</option>
-            </select>
+            />
           </motion.div>
 
           <motion.div
@@ -134,16 +126,13 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.9 }}
           >
-            <label htmlFor="00Ng700000C6Adh" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Date of Birth <span className="text-red-500">*</span></label>
-            <DatePicker
-              id="00Ng700000C6Adh"
-              name="00Ng700000C6Adh"
-              selected={startDate}
-              onChange={(date: Date | null) => setStartDate(date)}
-              dateFormat="dd/MM/yyyy"
+            <label htmlFor="00Ng700000C6CSb" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Amount of Student</label>
+            <input 
+              id="00Ng700000C6CSb" 
+              name="00Ng700000C6CSb" 
+              type="text" 
               className="w-full rounded-lg border border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-3 transition-all duration-200"
             />
-            <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">Format: DD/MM/YYYY</p>
           </motion.div>
 
           <motion.div
@@ -169,9 +158,25 @@ export default function Home() {
           </motion.div>
 
           <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, delay: 1.1 }}
+          >
+            <label htmlFor="recordType" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Lead Record Type</label>
+            <select 
+              id="recordType" 
+              name="recordType" 
+              className="w-full rounded-lg border border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-3 transition-all duration-200"
+            >
+              <option value="">--None--</option>
+              <option value="012g7000002DHgD">B2C</option>
+            </select>
+          </motion.div>
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 1.1 }}
+            transition={{ duration: 0.3, delay: 1.2 }}
             className="pt-4"
           >
             <motion.input 
