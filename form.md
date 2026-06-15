@@ -43,9 +43,6 @@ Interesting Course:<select  id="00Ng700000C6ERB" multiple="multiple" name="00Ng7
 <option value="Comprehensive">Comprehensive</option>
 </select><br>
 
-<label for="recordType">Lead Record Type</label><select  id="recordType" name="recordType"><option value="">--None--</option><option value="012g7000002DHgD">B2C</option>
-</select><br>
-
 <input type="submit" name="submit">
 
 </form>

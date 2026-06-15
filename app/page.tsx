@@ -126,11 +126,12 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.9 }}
           >
-            <label htmlFor="00Ng700000C6CSb" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Amount of Student</label>
+            <label htmlFor="00Ng700000C6CSb" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Amount of Student <span className="text-red-500">*</span></label>
             <input 
               id="00Ng700000C6CSb" 
               name="00Ng700000C6CSb" 
               type="text" 
+              required
               className="w-full rounded-lg border border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-3 transition-all duration-200"
             />
           </motion.div>
