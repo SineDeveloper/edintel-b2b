@@ -159,25 +159,9 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3, delay: 1.1 }}
-          >
-            <label htmlFor="recordType" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Lead Record Type</label>
-            <select 
-              id="recordType" 
-              name="recordType" 
-              className="w-full rounded-lg border border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-3 transition-all duration-200"
-            >
-              <option value="">--None--</option>
-              <option value="012g7000002DHgD">B2C</option>
-            </select>
-          </motion.div>
-
-          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 1.2 }}
+            transition={{ duration: 0.3, delay: 1.1 }}
             className="pt-4"
           >
             <motion.input 
